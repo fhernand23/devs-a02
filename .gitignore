@@ -1,0 +1,6 @@
+.env
+users.md
+devs-backend/jardependencies/*.jar
+devs-backend/repository/*
+devs-react-app/build/*
+devs-backend/target/*

@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rdevs Web Text Editor</title>
+        <link rel="icon" href="../public/logo.png" type="image/png">
+        <link rel="stylesheet" href="../public/style.css"> <!-- Asegúrate de que la ruta sea correcta -->
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="../public/logo.png" alt="Icono" class="logo-icon">
+                <h1>Rdevs Web Text Editor</h1>
+            </div>
+        </header>
+        
+        <div class="wrapper">
+            <div class="wrapperEditor">
+                <div class="editor-container">
+                    <div id="container"></div>
+                </div>
+                <div id="error-container" class="error-container"></div>
+                <button id="obtener-contenido" class="editor-button">
+                    Generate Rdevs Implementation
+                </button>
+            </div>
+            <div class="wrapperImagen">
+                <div class="image-container">
+                    <img id="imagen-scrollable"  ref={imageRef} src={imageBase64} alt="Imagen" />
+                </div>
+                <button id="obtener-imagen" class="editor-button">
+                    Generate Image
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <p></p>
+        </footer>
+    </body>
+    </html>
