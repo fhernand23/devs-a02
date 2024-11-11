@@ -4,3 +4,4 @@ devs-backend/jardependencies/*.jar
 devs-backend/repository/*
 devs-react-app/build/*
 devs-backend/target/*
+devs-react-app/node_modules/*

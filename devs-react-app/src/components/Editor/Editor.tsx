@@ -2,6 +2,8 @@ import * as React from 'react';
 import * as monaco from 'monaco-editor-core';
 import RdevsLangService from '../../language-service/LanguageService';
 
+const BASE_URL = 'http://a02-devs-backend:8092/b02';
+
 interface IEditorProps {
   language: string;
 }
@@ -95,7 +97,7 @@ The Machine3 receives inputs from Machine1`,
       }
 
       try {
-        const response = await fetch('http://localhost:9090/mensaje/post', {
+        const response = await fetch(`${BASE_URL}/mensaje/post`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -156,7 +158,7 @@ The Machine3 receives inputs from Machine1`,
       }
 
       try {
-        const response = await fetch('http://localhost:9090/mensaje/crear-imagen', {
+        const response = await fetch(`${BASE_URL}/mensaje/crear-imagen`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

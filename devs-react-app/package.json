@@ -1,6 +1,7 @@
 {
   "name": "rdevswebtexteditor",
   "version": "1.0.0",
+  "homepage": "/a02",
   "description": "Rdevs Web Text Editor",
   "scripts": {
     "start": "webpack-dev-server --hot --open",

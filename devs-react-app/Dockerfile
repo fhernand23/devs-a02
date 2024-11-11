@@ -1,5 +1,5 @@
 # Usa una imagen base de Node.js
-FROM node:16 AS build
+FROM node:18 AS build
 
 # Define el directorio de trabajo
 WORKDIR /app
@@ -13,6 +13,8 @@ RUN npm install
 # Copia el resto del código de la aplicación
 COPY . .
 
+ARG REACT_APP_BASE_PATH
+
 # Construye la aplicación
 RUN npm run build
 
@@ -20,7 +22,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copia los archivos construidos en el directorio adecuado de nginx
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=0 /app/build /usr/share/nginx/html
 
 # Expone el puerto por defecto de nginx
 EXPOSE 80

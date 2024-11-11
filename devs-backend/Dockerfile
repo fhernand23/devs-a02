@@ -14,7 +14,7 @@ RUN ./mvnw install
 # COPY target/rdevs.webtexteditor.backend-0.0.1-SNAPSHOT.jar app.jar
 
 # Expone el puerto en el que tu aplicación se ejecuta
-EXPOSE 9090
+EXPOSE 8092
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "target/rdevs.webtexteditor.backend-0.0.1-SNAPSHOT.jar"]
