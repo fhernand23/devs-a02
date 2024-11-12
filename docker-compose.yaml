@@ -1,10 +1,10 @@
 services:
   a02-backend:
-    container_name: a02-devs-backend
+    container_name: a02-backend
     build:
       context: ./devs-backend
       dockerfile: Dockerfile
-    image: a02-devs-backend
+    image: a02-backend
     restart: always
     ports:
       - 8092:8092
@@ -12,14 +12,15 @@ services:
       - JWT_SECRET=${A02_JWT_SECRET}
       - SERVER_PORT=${A02_SERVER_PORT}
       - SERVER_PATH=${A02_SERVER_PATH}
+
   a02-frontend:
-    container_name: a02-devs-frontend
+    container_name: a02-frontend
     build:
       context: ./devs-react-app
       dockerfile: Dockerfile
       args:
         - REACT_APP_BASE_PATH=${A02_REACT_APP_BASE_PATH}
-    image: a02-devs-frontend
+    image: a02-frontend
     restart: always
     ports:
       - 3002:80

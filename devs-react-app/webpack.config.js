@@ -1,6 +1,7 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -22,7 +23,8 @@ module.exports = {
                     return 'bundle.[hash].js';
             }
         },
-        path: path.resolve(__dirname, 'build')
+        // path: path.resolve(__dirname, 'build')
+        path: path.resolve(__dirname, 'dist')
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.css']
@@ -42,7 +44,18 @@ module.exports = {
     plugins: [
         new htmlWebpackPlugin({
             template: './src/index.html'
-        })
+        }),
+        new CopyPlugin({
+            patterns: [
+              { 
+                from: 'public', 
+                to: '', 
+                globOptions: {
+                  ignore: ['**/index.html']
+                }
+              },
+            ],
+        }),   
     ],
     optimization: {
         minimize: true,
@@ -52,5 +65,17 @@ module.exports = {
                 ecma: 2020,
             },
         })],
+    },
+    devServer: {
+        historyApiFallback: {
+          index: '/a02/'
+        },
+        port: 3002,
+        host: 'localhost',
+        publicPath: '/a02/',
+        // contentBase: path.join(__dirname, 'public'),
+        contentBase: path.join(__dirname, 'dist'),
+        open: true,
+        openPage: 'a02/'
     }
 }

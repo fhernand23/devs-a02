@@ -2,7 +2,8 @@ import * as React from 'react';
 import * as monaco from 'monaco-editor-core';
 import RdevsLangService from '../../language-service/LanguageService';
 
-const BASE_URL = 'http://a02-devs-backend:8092/b02';
+//const BASE_URL = 'http://a02-backend:8092/b02';
+const BASE_URL = '/b02';
 
 interface IEditorProps {
   language: string;
@@ -23,7 +24,7 @@ const Editor: React.FC<IEditorProps> = (props: IEditorProps) => {
 
     const imgElement = document.getElementById('imagen-scrollable') as HTMLImageElement | null;
     if (imgElement) {
-      imgElement.src = '../public/imagen_ejemplo.jpeg'; 
+      imgElement.src = 'imagen_ejemplo.jpeg'; 
     }
 
     if (editorRef.current) {

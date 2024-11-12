@@ -4,8 +4,8 @@
   "homepage": "/a02",
   "description": "Rdevs Web Text Editor",
   "scripts": {
-    "start": "webpack-dev-server --hot --open --port 3002",
-    "build": "webpack --mode production", 
+    "start": "webpack-dev-server --hot --open",
+    "build": "webpack --mode production",
     "antlr4ts": "antlr4ts ./RDEVS.g4 -o ./src/ANTLR"
   },
   "author": "Open",
@@ -23,6 +23,7 @@
     "@types/react": "^16.8.12",
     "@types/react-dom": "^16.8.3",
     "antlr4ts-cli": "^0.5.0-alpha.3",
+    "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^3.3.0",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^1.0.1",
