@@ -2819,12 +2819,12 @@ export class RDEVSParser extends Parser {
 				this.match(RDEVSParser.PARENTHESIS_OPEN);
 				this.state = 803;
 				_localctx._id1 = this.id();
-				_localctx.listComponentsNodes.add(_localctx._id1.value_id);
+				_localctx.listComponentsNodes.push(_localctx._id1.value_id);
 				this.state = 805;
 				this.match(RDEVSParser.COMMA_WS);
 				this.state = 806;
 				_localctx._id2 = this.id();
-				_localctx.listComponentsNodes.add(_localctx._id2.value_id);
+				_localctx.listComponentsNodes.push(_localctx._id2.value_id);
 				this.state = 808;
 				this.match(RDEVSParser.PARENTHESIS_CLOSE);
 				this.state = 809;
@@ -2832,7 +2832,7 @@ export class RDEVSParser extends Parser {
 				{
 				this.state = 810;
 				_localctx._l = this.listOfComponentsNodes();
-				_localctx.listComponentsNodes.addAll(_localctx._l.listComponentsNodes);
+				_localctx.listComponentsNodes.push(..._localctx._l.listComponentsNodes);
 				}
 				}
 				break;
@@ -2851,8 +2851,8 @@ export class RDEVSParser extends Parser {
 				this.state = 817;
 				this.match(RDEVSParser.PARENTHESIS_CLOSE);
 
-				                    _localctx.listComponentsNodes.add(_localctx._id1.value_id);
-				                    _localctx.listComponentsNodes.add(_localctx._id2.value_id);
+				                    _localctx.listComponentsNodes.push(_localctx._id1.value_id);
+				                    _localctx.listComponentsNodes.push(_localctx._id2.value_id);
 				                    
 				}
 				break;
@@ -2864,12 +2864,12 @@ export class RDEVSParser extends Parser {
 				this.match(RDEVSParser.PARENTHESIS_OPEN);
 				this.state = 821;
 				_localctx._id1 = this.id();
-				_localctx.listComponentsNodes.add(_localctx._id1.value_id);
+				_localctx.listComponentsNodes.push(_localctx._id1.value_id);
 				this.state = 823;
 				this.match(RDEVSParser.COMMA);
 				this.state = 824;
 				_localctx._id2 = this.id();
-				_localctx.listComponentsNodes.add(_localctx._id2.value_id);
+				_localctx.listComponentsNodes.push(_localctx._id2.value_id);
 				this.state = 826;
 				this.match(RDEVSParser.PARENTHESIS_CLOSE);
 				this.state = 827;
@@ -2877,7 +2877,7 @@ export class RDEVSParser extends Parser {
 				{
 				this.state = 828;
 				_localctx._l = this.listOfComponentsNodes();
-				_localctx.listComponentsNodes.addAll(_localctx._l.listComponentsNodes);
+				_localctx.listComponentsNodes.push(..._localctx._l.listComponentsNodes);
 				}
 				}
 				break;
@@ -2896,8 +2896,8 @@ export class RDEVSParser extends Parser {
 				this.state = 835;
 				this.match(RDEVSParser.PARENTHESIS_CLOSE);
 
-				                    _localctx.listComponentsNodes.add(_localctx._id1.value_id);
-				                    _localctx.listComponentsNodes.add(_localctx._id2.value_id);
+				                    _localctx.listComponentsNodes.push(_localctx._id1.value_id);
+				                    _localctx.listComponentsNodes.push(_localctx._id2.value_id);
 				                    
 				}
 				break;
@@ -2933,18 +2933,18 @@ export class RDEVSParser extends Parser {
 				{
 				this.state = 840;
 				_localctx._id1 = this.id();
-				_localctx.listConnections.add(_localctx._id1.value_id);
+				_localctx.listConnections.push(_localctx._id1.value_id);
 				this.state = 842;
 				this.match(RDEVSParser.WITH);
 				this.state = 843;
 				_localctx._id2 = this.id();
-				_localctx.listConnections.add(_localctx._id2.value_id);
+				_localctx.listConnections.push(_localctx._id2.value_id);
 				this.state = 845;
 				this.match(RDEVSParser.COMMA);
 				{
 				this.state = 846;
 				_localctx._l = this.listOfConnections();
-				_localctx.listConnections.addAll(_localctx._l.listConnections);
+				_localctx.listConnections.push(..._localctx._l.listConnections);
 				}
 				}
 				break;
@@ -2967,10 +2967,10 @@ export class RDEVSParser extends Parser {
 				this.state = 855;
 				_localctx._id4 = this.id();
 
-				                        _localctx.listConnections.add(_localctx._id1.value_id);
-				                        _localctx.listConnections.add(_localctx._id2.value_id);
-				                        _localctx.listConnections.add(_localctx._id3.value_id);
-				                        _localctx.listConnections.add(_localctx._id4.value_id);
+				                        _localctx.listConnections.push(_localctx._id1.value_id);
+				                        _localctx.listConnections.push(_localctx._id2.value_id);
+				                        _localctx.listConnections.push(_localctx._id3.value_id);
+				                        _localctx.listConnections.push(_localctx._id4.value_id);
 				                    
 				}
 				break;
@@ -3006,13 +3006,13 @@ export class RDEVSParser extends Parser {
 				{
 				this.state = 860;
 				_localctx._id = this.id();
-				_localctx.lista.add(_localctx._id.value_id);
+				_localctx.lista.push(_localctx._id.value_id);
 				this.state = 862;
 				this.match(RDEVSParser.COMMA);
 				{
 				this.state = 863;
 				_localctx._l = this.listOfNodes();
-				_localctx.lista.addAll(_localctx._l.lista);
+				_localctx.lista.push(..._localctx._l.lista);
 				}
 				}
 				break;
@@ -3027,8 +3027,8 @@ export class RDEVSParser extends Parser {
 				this.state = 868;
 				_localctx._d = this.id();
 
-				                    _localctx.lista.add(_localctx._i.value_id);
-				                    _localctx.lista.add(_localctx._d.value_id);
+				                    _localctx.lista.push(_localctx._i.value_id);
+				                    _localctx.lista.push(_localctx._d.value_id);
 				                
 				}
 				break;
@@ -3927,7 +3927,7 @@ export class CommentContext extends ParserRuleContext {
 
 
 export class ListOfComponentsNodesContext extends ParserRuleContext {
-	public listComponentsNodes: [];
+	public listComponentsNodes: any[];
 	public _id1!: IdContext;
 	public _id2!: IdContext;
 	public _l!: ListOfComponentsNodesContext;
@@ -3976,7 +3976,7 @@ export class ListOfComponentsNodesContext extends ParserRuleContext {
 
 
 export class ListOfConnectionsContext extends ParserRuleContext {
-	public listConnections: [];
+	public listConnections: any[];
 	public _id1!: IdContext;
 	public _id2!: IdContext;
 	public _l!: ListOfConnectionsContext;
@@ -4026,7 +4026,7 @@ export class ListOfConnectionsContext extends ParserRuleContext {
 
 
 export class ListOfNodesContext extends ParserRuleContext {
-	public lista: [];
+	public lista: any[];
 	public _id!: IdContext;
 	public _l!: ListOfNodesContext;
 	public _i!: IdContext;

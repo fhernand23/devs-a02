@@ -27,16 +27,10 @@ docker-compose build
 docker-compose up
 ```
 
-**Only DB and backend**
+**Only backend**
 
 ```
-docker-compose up a01-backend
-```
-
-**Only DB**
-
-```
-docker-compose up a01-db
+docker-compose up a02-backend
 ```
 
 **Clean up everything from Docker (Warning if you use Docker for local development - this will remove ALL your images)**

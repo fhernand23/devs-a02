@@ -10,6 +10,7 @@ module.exports = {
         "rdevsLangWorker": './src/rdevs-lang/rdevslang.worker.ts'
     },
     output: {
+        publicPath: '/a02/',
         globalObject: 'self',
         filename: (chunkData) => {
             switch (chunkData.chunk.name) {

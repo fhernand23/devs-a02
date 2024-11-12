@@ -4,7 +4,7 @@
   "homepage": "/a02",
   "description": "Rdevs Web Text Editor",
   "scripts": {
-    "start": "webpack-dev-server --hot --open",
+    "start": "webpack-dev-server --hot --open --port 3002",
     "build": "webpack --mode production", 
     "antlr4ts": "antlr4ts ./RDEVS.g4 -o ./src/ANTLR"
   },
