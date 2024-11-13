@@ -1,5 +1,7 @@
 # Devs tool
 
+Herramienta desarrollada en la UTN FRSF por Clarisa Espertino (@clari62).
+
 ### Dev Prerequisites
 
 Docker is required

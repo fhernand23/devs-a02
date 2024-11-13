@@ -134,7 +134,7 @@ The Machine3 receives inputs from Machine1`,
 
           const imgElement = document.getElementById('imagen-scrollable') as HTMLImageElement | null;
           if (imgElement) {
-            imgElement.src = "../public/imagen_error.jpeg"; 
+            imgElement.src = "imagen_error.jpeg"; 
           }
 
         }
@@ -194,7 +194,7 @@ The Machine3 receives inputs from Machine1`,
 
           const imgElement = document.getElementById('imagen-scrollable') as HTMLImageElement | null;
           if (imgElement) {
-            imgElement.src = "../public/imagen_error.jpeg"; 
+            imgElement.src = "imagen_error.jpeg"; 
           }
 
         }
